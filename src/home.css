@@ -1,0 +1,54 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; /* texty i menu na střed */
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(-30deg, #470b40, #0c2e7b);
+  color: #fff;
+}
+
+/* Menu */
+#uimenu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* mezera mezi buttony */
+  width: 100%;
+  max-width: 500px; /* buttony nebudou extrémně široké na velkých monitorech */
+  padding: 20px;
+}
+
+/* Buttony */
+#uimenu button {
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(90deg, #c412af, #0e3ca5);
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover efekt */
+#uimenu button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(90deg, #d81ac5, #1e4fff); /* trochu světlejší */
+}
+
+/* Kliknutí (press efekt) */
+#uimenu button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}

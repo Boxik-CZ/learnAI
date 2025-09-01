@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, rgb(5, 2, 45), rgb(2, 38, 45));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+select {
+  width: 10vw;
+  height: 5vh;
+}
+.data button {
+  width: 20vw;
+  height: 7vh;
+  font-size: 110%;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  /* gradient background */
+  background: linear-gradient(135deg, #4c1d95, #0ea5e9);
+
+  /* efekt hloubky */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+
+  /* smooth animace */
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.data button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #6366f1, #0ea5e9);
+}
+
+.data button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.dialog {
+  z-index: 3;
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(20, 20, 20, 1);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.dialog .line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.dialog .line button {
+  font-size: medium;
+}
+.dialog .hline {
+  width: 90vw;
+  background-color: grey;
+  height: 1px;
+}
+.dialog button {
+  align-self: flex-end;
+  width: 4vw;
+  height: 4vw;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  font-weight:lighter;
+}
+.dialog button:hover {
+  background-color: rgba(30, 30, 30, 0.5);
+}
