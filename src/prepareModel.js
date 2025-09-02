@@ -6,24 +6,16 @@ export async function readFile(path) {
 
 export async function getDataset(path) {
   const text = await readFile(path);
-  let x = [];
-  let y = [];
-  let a = text.split("\n")[0];
-  let b = text.split("\n")[1];
-  x = a.split(";");
-  
-  for (let i = 0; i < x.length; i++) {
-    x[i] = x[i].split(",");
-    for (let n = 0; n < x[i].length; n++) {
-        x[i][n] = parseInt(x[i][n]);
-    }
-  }
-  y = b.split(";");
-  for (let i = 0; i < y.length; i++) {
-    y[i] = y[i].split(",");
-    for (let n = 0; n < y[i].length; n++) {
-        y[i][n] = parseInt(y[i][n]);
-    }
-  }
-  return [x,y];
+  const lines = text.trim().split("\n");
+  if (lines.length < 2) throw new Error("Soubor musí mít alespoň dva řádky");
+
+  const parseLine = (line) =>
+    line.split(";").map(part =>
+      part.split(",").map(num => parseInt(num))
+    );
+
+  const x = parseLine(lines[0]);
+  const y = parseLine(lines[1]);
+
+  return [x, y];
 }
