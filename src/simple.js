@@ -1,4 +1,4 @@
-import { getDataset } from "./prepareModel";
+import { getDataset } from "https://boxik-cz.github.io/learnAI/src/prepareModel.js";
 const preD = document.getElementById("presetDS");
 const uplD = document.getElementById("uplDS");
 const clsBtn = document.getElementById("close");
