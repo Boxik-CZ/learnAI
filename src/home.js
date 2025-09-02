@@ -5,7 +5,7 @@ btns[0].onclick = () => {
   if (lang == "us") {
     window.location.href = "./simpleEN.html";
   } else if (lang == "cs") {
-    window.location.href = "./simpleCS.heml";
+    window.location.href = "./simpleCS.html";
   }
 };
 btns[1].onclick = () => {
