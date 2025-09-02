@@ -67,7 +67,8 @@ select {
   width: 10vw;
   height: 10vh;
   background-color: rgb(23, 140, 23);
-
+  border: 0;
+  border-radius: 5vh;
 }
 .dialog .hline {
   width: 90vw;
@@ -86,7 +87,7 @@ select {
   border: 0;
   border-radius: 50%;
   color: white;
-  font-weight:lighter;
+  font-weight: lighter;
 }
 #close:hover {
   background-color: rgba(30, 30, 30, 0.5);
