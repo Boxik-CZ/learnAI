@@ -6,6 +6,7 @@ export async function readFile(path) {
 
 export async function getDataset(path) {
   const text = await readFile(path);
+  console.log(text);
   const lines = text.trim().split("\n");
   if (lines.length < 2) throw new Error("Soubor musí mít alespoň dva řádky");
 
