@@ -1,5 +1,5 @@
-export async function readFile() {
-  const response = await fetch('./datasets/data.txt');
+export async function readFile(path) {
+  const response = await fetch(path);
   const text = await response.text();
   return text;
 }
