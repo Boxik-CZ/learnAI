@@ -62,15 +62,19 @@ select {
   padding-left: 20px;
   padding-right: 20px;
 }
-.dialog .line button {
+.add {
   font-size: medium;
+  width: 10vw;
+  height: 10vh;
+  background-color: rgb(23, 140, 23);
+
 }
 .dialog .hline {
   width: 90vw;
   background-color: grey;
   height: 1px;
 }
-.dialog button {
+#close {
   align-self: flex-end;
   width: 4vw;
   height: 4vw;
@@ -84,6 +88,6 @@ select {
   color: white;
   font-weight:lighter;
 }
-.dialog button:hover {
+#close:hover {
   background-color: rgba(30, 30, 30, 0.5);
 }
