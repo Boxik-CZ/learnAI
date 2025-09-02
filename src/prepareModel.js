@@ -5,7 +5,7 @@ export async function readFile() {
 }
 
 export function getDataset(path) {
-  text = readFile(path);
+  let text = readFile(path);
   let x = [];
   let y = [];
   let a = text.split("\n")[0];
